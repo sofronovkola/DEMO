@@ -75,6 +75,14 @@
             <Button Name="RemoveButton" >Удалить</Button>
         </StackPanel>
 
+<StackPanel Height="40" Name="SearchPanel" Orientation="Horizontal">
+    <ComboBox Name="ManufacturersCBox" ItemsSource="{Binding manufacturer1}" DisplayMemberBinding="{Binding Manufacturer1}"></ComboBox>
+    <TextBox Name="SearchTextB"></TextBox>
+    <RadioButton Name="SortUpButton">по возрастанию</RadioButton>
+    <RadioButton Name="SortDownButton">по убыванию</RadioButton>
+    <Button Name="ResetButton">Сброс</Button>
+</StackPanel>
+
     </Grid>
 </UserControl>
 

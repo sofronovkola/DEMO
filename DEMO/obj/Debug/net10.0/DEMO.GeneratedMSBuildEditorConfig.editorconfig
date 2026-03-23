@@ -25,23 +25,23 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = DEMO
-build_property.ProjectDir = c:\Users\kolya\OneDrive\Документы\Avolonia\DEMO\
+build_property.ProjectDir = C:\Users\kolya\OneDrive\Документы\Avolonia\DEMO\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[c:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/AuthUC.axaml]
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/AuthUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[c:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/EditAddProductUC.axaml]
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/EditAddProductUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[c:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/MainUC.axaml]
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/MainUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[c:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/App.axaml]
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[c:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/MainWindow.axaml]
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -29,7 +29,7 @@ public partial class MainUC : UserControl
     private void EventUI()
     {
         MUControl.Loaded += Control_OnLoaded; // Подписка на событие
-        ProdustListB.SelectionChanged+=ProductListBox_OnSelectionChanged;
+        //ProdustListB.SelectionChanged+=ProductListBox_OnSelectionChanged;
         RemoveButton.Click += DeleteButton_OnClick;
         AddButton.Click+=AddButton_OnClick;
         EditButton.Click+=EditButton_OnClick;
@@ -40,6 +40,7 @@ public partial class MainUC : UserControl
         SearchTextB.TextChanged += SearchTextB_OnTextChanged;
         SortUpButton.IsCheckedChanged += SortButton_OnChecked;
         SortDownButton.IsCheckedChanged += SortButton_OnChecked;
+        ResetButton.Click += ResetButton_OnClick;
     }
 
 
@@ -102,7 +103,7 @@ public partial class MainUC : UserControl
 
     private void ManufacturersCBox_OnSelectionChanged(object? sender, RoutedEventArgs e)
     {
-    manufacturPar = ((Manufacturer)ManufacturersCBox.SelectedItem).Manufacturer1;
+    manufacturPar = (ManufacturersCBox.SelectedItem as Manufacturer)?.Manufacturer1 ?? string.Empty;
     Search(manufacturPar, searchPar);
     }
 
@@ -123,6 +124,20 @@ public partial class MainUC : UserControl
     {
         sort = 0;
     }
+    Search(manufacturPar, searchPar, sort);
+    }
+
+    private void ResetButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+    manufacturPar = string.Empty;
+    searchPar = string.Empty;
+    sort = -1;
+
+    ManufacturersCBox.SelectedItem = null;
+    SearchTextB.Text = string.Empty;
+    SortUpButton.IsChecked = false;
+    SortDownButton.IsChecked = false;
+
     Search(manufacturPar, searchPar, sort);
     }
 }

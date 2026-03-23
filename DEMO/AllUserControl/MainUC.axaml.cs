@@ -129,15 +129,6 @@ public partial class MainUC : UserControl
 
     private void ResetButton_OnClick(object? sender, RoutedEventArgs e)
     {
-    manufacturPar = string.Empty;
-    searchPar = string.Empty;
-    sort = -1;
-
-    ManufacturersCBox.SelectedItem = null;
-    SearchTextB.Text = string.Empty;
-    SortUpButton.IsChecked = false;
-    SortDownButton.IsChecked = false;
-
-    Search(manufacturPar, searchPar, sort);
+       App.MainWindow.MainContentControl.Content = new MainUC(); 
     }
 }

@@ -40,6 +40,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/MainUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/AllUserControl/OrderUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/kolya/OneDrive/Документы/Avolonia/DEMO/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

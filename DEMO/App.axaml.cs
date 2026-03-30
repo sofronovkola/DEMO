@@ -1,4 +1,5 @@
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using DEMO.AllUserControl;
@@ -8,6 +9,7 @@ namespace DEMO;
 public partial class App : Application
 {
     public static MainWindow MainWindow;
+    public static UserControl PrewiewUC;
 
     public override void Initialize()
     {

@@ -33,7 +33,7 @@ public partial class MainUC : UserControl
         RemoveButton.Click += DeleteButton_OnClick;
         AddButton.Click+=AddButton_OnClick;
         EditButton.Click+=EditButton_OnClick;
-
+        OrderButton.Click+=OrderButton_OnClick;
         //Подписки для реализации сортировки и поиска
         ManufacturersCBox.SelectionChanged += ManufacturersCBox_OnSelectionChanged;
 
@@ -130,5 +130,10 @@ public partial class MainUC : UserControl
     private void ResetButton_OnClick(object? sender, RoutedEventArgs e)
     {
        App.MainWindow.MainContentControl.Content = new MainUC(); 
+    }
+
+    private void OrderButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+       App.MainWindow.MainContentControl.Content = new OrderUC(); 
     }
 }

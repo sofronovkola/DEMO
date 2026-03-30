@@ -4,6 +4,8 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using DEMO;
+using DEMO.AllUserControl;
 using DEMO.Entities;
 using DEMO.Models;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +14,21 @@ namespace DEMO.AllUserControl;
 
 public partial class OrderUC : UserControl
 {
-    public List<Order> OrderList{get; set;}=new List<Order>();
+    public List<Order> orderList{get; set;} = new List<Order>();
     public OrderUC()
     {
         InitializeComponent();
-        OrderList=Context.Connect.Orders.Include(c=>c.AddressNavigation).ToList();
+        orderList = Context.Connect.Orders.Include(c=> c.AddressNavigation)
+                                            .Include(c=> c.IdUserNavigation).ToList();
+        EventUI();               
+    }
+
+    private void EventUI(){
+        OrderUserControl.Loaded += Control_OnLoaded;//Подписка на событие
+
+        AddButton.Click += AddButton_OnClick;
+        OrderListB.SelectionChanged += ProdustListB_OnSelectionChanged;
+        RemoveButton.Click += DeleteButton_onClick;
     }
 
     public void Control_OnLoaded(object? sender, RoutedEventArgs e)
@@ -24,23 +36,29 @@ public partial class OrderUC : UserControl
         DataContext = this;
     }
 
-    private void AddButton_OnClick(object? sender, RoutedEventArgs e)
+      public void AddButton_OnClick(object? sender, RoutedEventArgs e)
     {
-        App.MainWindow.MainContentControl.Content = new EditAddProductUC();
+        App.MainWindow.MainContentControl.Content = new EditAddOrderUC();
     }
 
-    private void EditButton_OnClick(object? sender, RoutedEventArgs e)
+    Order selectProduct;
+     public void ProdustListB_OnSelectionChanged(object? sender, RoutedEventArgs e)
     {
-        
+       selectProduct =(Order)OrderListB.SelectedItem;
     }
 
-    private void DeleteButton_OnClick(object? sender, RoutedEventArgs e)
+    public void EditButton_OnClick(object? sender, RoutedEventArgs e)
     {
-        
+      App.MainWindow.MainContentControl.Content = new EditAddOrderUC(selectProduct);
     }
 
-        private void ProductListBox_OnSelectionChanged(object? sender, RoutedEventArgs e)
+    public void DeleteButton_onClick(object? sender, RoutedEventArgs e)
     {
+      
+            Context.Connect.Orders.Remove(selectProduct);
+            Context.Connect.SaveChanges();
+           
 
+         App.MainWindow.MainContentControl.Content = new OrderUC();
     }
 }

@@ -73,6 +73,7 @@
             <Button Name="AddButton"  >Добавить</Button>
             <Button Name="EditButton" >Изменить</Button>
             <Button Name="RemoveButton" >Удалить</Button>
+            <Button Name="OrderButton">Заказы</Button>
         </StackPanel>
 
 <StackPanel Height="40" Name="SearchPanel" Orientation="Horizontal">
@@ -88,4 +89,6 @@
 
 <!--<Button Name="AddButton" Click="AddButton_OnClick" >Добавить</Button>
             <Button Name="EditButton" Click="EditButton_OnClick">Изменить</Button>
-            <Button Name="RemoveButton" Click= "DeleteButton_OnClick">Удалить</Button>-->
+            <Button Name="RemoveButton" Click= "DeleteButton_OnClick">Удалить</Button>
+            
+            Loaded="Control_OnLoaded"-->

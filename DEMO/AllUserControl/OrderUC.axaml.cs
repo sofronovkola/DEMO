@@ -29,6 +29,7 @@ public partial class OrderUC : UserControl
         AddButton.Click += AddButton_OnClick;
         OrderListB.SelectionChanged += ProdustListB_OnSelectionChanged;
         RemoveButton.Click += DeleteButton_onClick;
+        EditButton.Click+=EditButton_OnClick;
     }
 
     public void Control_OnLoaded(object? sender, RoutedEventArgs e)
@@ -45,6 +46,7 @@ public partial class OrderUC : UserControl
      public void ProdustListB_OnSelectionChanged(object? sender, RoutedEventArgs e)
     {
        selectProduct =(Order)OrderListB.SelectedItem;
+       //selectProduct = OrderListB.SelectedItem as Order;
     }
 
     public void EditButton_OnClick(object? sender, RoutedEventArgs e)
